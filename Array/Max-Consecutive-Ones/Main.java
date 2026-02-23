@@ -26,3 +26,8 @@ public class Main {
         System.out.println("Number of max consecutive ones: "+result);
     }
 }
+
+
+// The time complexity of the given code is O(n), where n is the length of the input array nums. This is because the code iterates through the array exactly once, performing constant-time operations for each element.
+
+// The space complexity is O(1), as the algorithm uses only a fixed amount of additional space (variables max and count), regardless of the size of the input array.
