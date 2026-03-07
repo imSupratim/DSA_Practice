@@ -1,6 +1,8 @@
 class Solution {
     public static void sortColors(int[] nums) {
-        //Dutch National Flag Algo
+        //Dutch National Flag Algo;
+        //Time comp = O(n);
+        //Space comp = O(1);
 
         int n = nums.length;
         int low=0, mid=0, high=n-1;
