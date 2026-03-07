@@ -25,6 +25,9 @@ class Solution {
     }
 }
 
+// Time complexity: O(n)
+// Space complexity: O(1)
+
 public class Main {
     public static void main(String[] args) {
         int[] nums={2,2,1,1,1,2,2};
