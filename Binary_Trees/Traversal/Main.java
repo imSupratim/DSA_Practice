@@ -12,6 +12,8 @@ class Node{
     }
 }
 
+
+
 class Traversal{
     static void preorder(Node root){
         if(root == null){
@@ -42,6 +44,38 @@ class Traversal{
         postorder(node.right);
         System.out.print(node.data+" ");
     }
+
+    static  List<List<Integer>> levelOrder(Node root) {
+        List<List<Integer>> list = new ArrayList<>();
+
+        if(root == null){
+            return list;
+        }
+
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+
+        while(!q.isEmpty()){
+            int size = q.size();
+            List<Integer> level = new ArrayList<>();
+            for(int i = 0 ; i<size; i++){
+                Node node = q.poll();
+                level.add(node.data);
+
+                if(node.left != null){
+                    q.add(node.left);
+                }
+
+                if(node.right != null){
+                    q.add(node.right);
+                }
+            }
+
+            list.add(level);
+        }
+
+        return list;
+    }
 }
 
 
@@ -70,6 +104,9 @@ public class Main {
         System.out.print("Postorder traversal: ");
         Traversal.postorder(root);
         System.out.println();
+
+        List<List<Integer>> list = Traversal.levelOrder(root);
+        System.out.println("Level order traversal: "+list);
 
     }
 }
