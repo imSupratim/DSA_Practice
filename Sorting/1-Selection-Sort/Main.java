@@ -35,3 +35,5 @@ public class Main{
         
     }
 }
+
+// time comp: O(n)
